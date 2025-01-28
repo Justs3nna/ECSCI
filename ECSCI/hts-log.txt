@@ -1,0 +1,52 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 28 Jan 2025 14:06:08 at https://enfantcheri.edu.ph +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://enfantcheri.edu.ph -O1 "C:\Users\Wr3D\OneDrive\Desktop\ECSCI\ECSCI" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:06:24	Error: 	"Not Found" (404) at link https://enfantcheri.edu.ph/wp-content/themes/enfantcheri-theme/assets/img/students-header.png (from https://enfantcheri.edu.ph/)
+14:06:27	Warning: 	Link https://enfantcheri.edu.ph/page/2/ not scanned (follow robots meta tag)
+14:07:04	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=81
+14:07:04	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=81 to https://enfantcheri.edu.ph/history/
+14:07:04	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=84
+14:07:04	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=84 to https://enfantcheri.edu.ph/mission-vision/
+14:07:04	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=87
+14:07:04	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=87 to https://enfantcheri.edu.ph/milestone/
+14:07:04	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=20
+14:07:04	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=20 to https://enfantcheri.edu.ph/academic-program/
+14:07:05	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=22
+14:07:05	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=22 to https://enfantcheri.edu.ph/news/
+14:07:18	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=244
+14:07:18	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=244 to https://enfantcheri.edu.ph/sy2018-2019/
+14:07:18	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=24
+14:07:18	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=24 to https://enfantcheri.edu.ph/contact-us/
+14:07:18	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=32
+14:07:18	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=32 to https://enfantcheri.edu.ph/pre-school/
+14:07:18	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=35
+14:07:18	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=35 to https://enfantcheri.edu.ph/grade-school/
+14:07:18	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=280
+14:07:18	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=280 to https://enfantcheri.edu.ph/ecsci-declares-winners-of-csg-election/
+14:07:19	Error: 	"Not Found" (404) at link https://enfantcheri.edu.ph/popper.js (from https://enfantcheri.edu.ph/wp-content/themes/enfantcheri-theme/assets/js/bootstrap.min.js)
+14:07:19	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=37
+14:07:19	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=37 to https://enfantcheri.edu.ph/high-school/
+14:07:19	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=176
+14:07:19	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=176 to https://enfantcheri.edu.ph/cherians-celebrate-buwan-ng-wika/
+14:07:19	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=172
+14:07:19	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=172 to https://enfantcheri.edu.ph/cherians-bag-awards-in-rspc/
+14:07:19	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=167
+14:07:19	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=167 to https://enfantcheri.edu.ph/ecsci-holds-fire-safety-and-prevention-seminar/
+14:07:19	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=163
+14:07:19	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=163 to https://enfantcheri.edu.ph/cherians-spread-good-cheer/
+14:07:19	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=71
+14:07:19	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=71 to https://enfantcheri.edu.ph/enrollment-2020-2021/
+14:07:19	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=68
+14:07:19	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=68 to https://enfantcheri.edu.ph/covid-updates-2/
+14:07:23	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=179
+14:07:23	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=179 to https://enfantcheri.edu.ph/csg-officers-take-oath-of-office/
+14:07:24	Warning: 	Moved Permanently for https://enfantcheri.edu.ph/?p=30
+14:07:24	Warning: 	File has moved from https://enfantcheri.edu.ph/?p=30 to https://enfantcheri.edu.ph/enfant-cheri-learning-centre/
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 17 seconds : 177 links scanned, 155 files written (41515465 bytes overall) [40547770 bytes received at 526594 bytes/sec], 1608262 bytes transferred using HTTP compression in 118 files, ratio 23%, 22.1 requests per connection
+(2 errors, 39 warnings, 0 messages)
