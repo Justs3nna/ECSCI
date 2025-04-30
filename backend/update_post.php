@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Handle file upload
         $image = $_FILES['image'];
         $imageName = time() . '_' . basename($image['name']); // Prevent filename conflicts
-        $uploadDir = 'uploads/'; // Make sure this folder exists and is writable
+        $uploadDir = '../uploads/'; // Make sure this folder exists and is writable
         $uploadFilePath = $uploadDir . $imageName;
 
         if (move_uploaded_file($image['tmp_name'], $uploadFilePath)) {

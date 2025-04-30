@@ -38,11 +38,11 @@ $result = $conn->query("SELECT * FROM posts ORDER BY date_posted DESC");
                                 ?>
                             </p>
 
-                            <a href="post.php?id=<?php echo $row['id']; ?>" class="read-more-btn">Read More</a>
+                            <a href="post.php?id=<?php echo $row['id']; ?>" class="read-more-btn" target="_blank">Read More</a>
                         </div>
                     </div>
                 <?php endwhile; ?>
-            <?php else: ?>
+            <?php else: ?> 
                 <p>No posts available.</p>
             <?php endif; ?>
         </div>
