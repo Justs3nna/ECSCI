@@ -30,8 +30,11 @@ $result = $conn->query("SELECT * FROM posts ORDER BY date_posted DESC");
         </div>
 
         <?php if (isset($_GET['message']) && $_GET['message'] === 'updated'): ?>
-            <div class="message">Post updated successfully!</div>
+            <script>
+                alert('Post updated successfully!');
+            </script>
         <?php endif; ?>
+
 
         <?php while($row = $result->fetch_assoc()): ?>
             <div class="post">
