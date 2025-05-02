@@ -31,9 +31,11 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <link href="../frontend/assets/img/logo.png" rel="icon">
 </head>
 <body>
 
+<img src="../frontend/assets/img/logo.png" style="position: relative; left: 45%; top: 50px">
 <div class="login-container">
     <h2>Admin Login</h2>
 
@@ -52,7 +54,7 @@ if (isset($_POST['login'])) {
             <input type="password" id="password" name="password" required>
         </div>
 
-        <button type="submit" name="login">Login</button>
+        <button type="submit" name="login" style="background-color: green">Login</button>
     </form>
 </div>
 

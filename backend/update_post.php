@@ -15,33 +15,57 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $content = $_POST['content'];
     $image_link = $_POST['link'];
 
-    // Check if a new image is uploaded
-    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
-        // Handle file upload
-        $image = $_FILES['image'];
-        $imageName = time() . '_' . basename($image['name']); // Prevent filename conflicts
-        $uploadDir = '../uploads/'; // Make sure this folder exists and is writable
-        $uploadFilePath = $uploadDir . $imageName;
+   // Check if images are uploaded
+if (isset($_FILES['image']) && count($_FILES['image']['name']) > 0) {
+    $imageNames = []; // Array to hold names of the uploaded images
+    $uploadDir = '../uploads/'; // Make sure this folder exists and is writable
 
-        if (move_uploaded_file($image['tmp_name'], $uploadFilePath)) {
-            // Update post with the new image and other fields
-            $sql = "UPDATE posts SET title = ?, author = ?, body = ?, image = ?, link = ? WHERE id = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssssi", $title, $author, $content, $imageName, $image_link, $id);
+    // Loop through each uploaded file
+    for ($i = 0; $i < count($_FILES['image']['name']); $i++) {
+        if ($_FILES['image']['error'][$i] === UPLOAD_ERR_OK) {
+            $image = $_FILES['image'];
+            $imageName = time() . '_' . basename($image['name'][$i]); // Prevent filename conflicts
+            $uploadFilePath = $uploadDir . $imageName;
 
-            if ($stmt->execute()) {
-                header("Location: dashboard.php?message=updated");
+            // Move the uploaded file to the target directory
+            if (move_uploaded_file($image['tmp_name'][$i], $uploadFilePath)) {
+                // Add the image name to the array
+                $imageNames[] = $imageName;
             } else {
-                echo "Error updating post.";
+                echo "Error uploading image: " . $image['name'][$i];
+                exit;
             }
         } else {
-            echo "Error uploading image.";
+            echo "Error uploading image: " . $_FILES['image']['name'][$i];
+            exit;
         }
+    }
+
+    // Convert the image names array to a comma-separated string
+    $imageNamesStr = implode(',', $imageNames);
+
+    // Update the post with the new images and other fields
+    $sql = "UPDATE posts SET title = ?, author = ?, body = ?, image = ?, link = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssi", $title, $author, $content, $imageNamesStr, $image_link, $id);
+
+    if ($stmt->execute()) {
+        header("Location: dashboard.php?message=updated");
     } else {
-        // No new image uploaded, just update the post without changing the image
-        $sql = "UPDATE posts SET title = ?, author = ?, body = ?, link = ? WHERE id = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssi", $title, $author, $content, $image_link, $id);
+        echo "Error updating post.";
+    }
+} else {
+    // No new image uploaded, just update the post without changing the image
+    $sql = "UPDATE posts SET title = ?, author = ?, body = ?, link = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssssi", $title, $author, $content, $image_link, $id);
+
+    if ($stmt->execute()) {
+        header("Location: dashboard.php?message=updated");
+    } else {
+        echo "Error updating post.";
+    }
+}
 
         if ($stmt->execute()) {
             header("Location: dashboard.php?message=updated");
@@ -49,5 +73,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Error updating post.";
         }
     }
-}
+
 ?>
